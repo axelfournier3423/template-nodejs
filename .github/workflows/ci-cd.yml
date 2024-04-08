@@ -1,0 +1,20 @@
+
+name: TESTS
+
+on: [pull_request]
+
+  workflow_dispatch:
+
+jobs:
+  test:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+      
+      
+      - name: Installer les dépendances
+         run: npm install
+
+      - name: Executer les tests
+        run: npm test

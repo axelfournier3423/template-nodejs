@@ -1,0 +1,21 @@
+
+name: TESTS
+
+on: [pull_request]
+
+jobs:
+  test:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: checkout du code
+        uses: actions/checkout@v2
+      
+      
+      - name: Installer les dépendances
+        run: npm install
+
+      - name: Executer les tests
+        run: npm test
